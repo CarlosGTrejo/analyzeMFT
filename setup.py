@@ -1,5 +1,4 @@
-import setuptools
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name='analyzeMFT',
@@ -11,5 +10,9 @@ setup(
     license='LICENSE.txt',
     description='Analyze the $MFT from a NTFS filesystem.',
     long_description=open('README.txt').read(),
-    scripts=['analyzeMFT.py']
+    entry_points = {
+        'console_scripts': [
+            'analyzeMFT = analyzeMFT:main'
+        ]
+    }
 )
