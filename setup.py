@@ -12,7 +12,7 @@ setup(
     long_description=open('README.txt').read(),
     entry_points = {
         'console_scripts': [
-            'analyzeMFT = analyzeMFT:main'
+            'analyzeMFT = analyzemft.__main__:main'
         ]
     }
 )
